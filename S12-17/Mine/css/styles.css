@@ -52,6 +52,12 @@ h4{
     margin-top: 3rem;
     text-align: center;
     display: inline-block;
+    /* 63 */
+    border: none;
+}
+
+.btn:hover{
+    cursor: pointer;
 }
 
 
@@ -359,7 +365,47 @@ h4{
 /****************************************************
 **************Contacto*******************************
 *****************************************************/
+/* 63 */
+.contact p{
+    font-size: 1.5rem;
+    color: #4f4f4f;
+    margin: 2rem 0;
+}
+
+legend{
+    font-size: 2rem;
+    color: #4f4f4f;
+}
 
 label{
     display: block;
+    font-weight: 700;
+}
+
+/* 62 */
+input:not([type="submit"]), textarea, select {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+/* 63 */
+input[type="radio"]{
+    width: auto;
+    margin: 0;
+}
+
+select{
+    appearance: none;
+}
+
+.contact-form{
+    display: flex;
+    max-width: 30rem;
+    justify-content: space-between;
+    align-items: center;
 }
