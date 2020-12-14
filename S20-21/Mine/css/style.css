@@ -65,6 +65,19 @@ img {
   .grid {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .centrar-columnas {
+    justify-content: center;
+  }
+
+  .columnas-12 {
+    flex: 0 0 100%;
+  }
+
+  .columnas-10 {
+    flex: 0 0 calc(83% - 1rem);
   }
 
   .columnas-8 {
@@ -281,4 +294,38 @@ img {
 ***********************/
 .curso p.descripcion {
   font-weight: 400;
+}
+
+/***********************
+*******CONTACTO*********
+***********************/
+.formulario-contacto {
+  background-color: #ffffff;
+  padding: 5rem;
+}
+@media (min-width: 768px) {
+  .formulario-contacto {
+    margin-top: -10rem;
+  }
+}
+.formulario-contacto .campo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.formulario-contacto .campo label {
+  flex: 0 0 8rem;
+}
+.formulario-contacto .campo input:not([type="submit"]),
+.formulario-contacto textarea {
+  flex: 1;
+  border: 1px solid #e1e1e1;
+  padding: 1rem;
+}
+.formulario-contacto textarea {
+  height: 20rem;
+}
+.formulario-contacto .enviar {
+  display: flex;
+  justify-content: flex-end;
 }
