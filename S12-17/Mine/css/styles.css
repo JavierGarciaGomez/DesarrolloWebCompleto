@@ -83,10 +83,12 @@ h4{
     display: block!important;
 }
 
+.centered-content{
+    max-width: 80rem;
+}
 
 
 /* HEADER */
-
 .site-header.inicio{
     background-image: url(../img/header.jpg);
     background-position: center center;
@@ -152,12 +154,14 @@ h4{
 .add-container{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* permita más de una linea*/
 }
 
-.add{
-    flex-basis: calc(33.33% - 1rem);
+.add{    
+    flex: 0 0 calc(33.33% - 1rem); /* grow / shrink / basis*/
     border: solid #b5b5b5 1px;
     background-color: #F5F5f5;
+    margin-bottom: 2rem;
 }
 
 .add-content{
@@ -178,6 +182,8 @@ h4{
     display: flex;
     padding: 0;
     justify-content: space-evenly;
+    max-width: 40rem;
+    flex: 1;
 }
 
 .chars-icons li{
@@ -313,10 +319,39 @@ h4{
     align-items: center;
 }
 
-.copyright{
-    
-}
-
 .site-footer a{
     font-size: 2rem;    
+}
+
+
+/****************************************************
+**************Nosotros*******************************
+*****************************************************/
+
+.site-header{
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+
+.us-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+}
+
+.us-text blockquote{
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0 0 3rem 0;
+}
+
+/****************************************************
+**************Anuncio*******************************
+*****************************************************/
+
+.property-summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
