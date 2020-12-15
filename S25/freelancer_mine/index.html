@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FlexBox Freelancer</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/412daea0ea.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Clientes</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="contenedor-hero">
+            <h1>Diseño y desarrollo freelancer</h1>
+            <p> <i class="fas fa-map-marker-alt"></i> Sevilla, España</p>
+            <a href="#" class="btn">Contactar</a>
+        </div>
+    </div>
+
+    <main class="contenedor">
+        <h2>Nuestros Servicios</h2>
+        <div class="servicios">
+            <div class="servicio">
+                <h3 class="service-title">Diseño Web</h3>
+                <div class="icono-servicio">
+                    <i class="fas fa-pen-nib"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reprehenderit molestiae vel doloremque
+                    ratione excepturi maxime unde dolores ab vero.</p>
+            </div>
+            <div class="servicio">
+                <h3 class="service-title">Aplicaciones móviles</h3>
+                <div class="icono-servicio">
+                    <i class="fab fa-android"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reprehenderit molestiae vel doloremque
+                    ratione excepturi maxime unde dolores ab vero.</p>
+            </div>
+
+            <div class="servicio">
+                <h3 class="service-title">Social media</h3>
+                <div class="icono-servicio">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi reprehenderit molestiae vel doloremque
+                    ratione excepturi maxime unde dolores ab vero.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <form action="#">
+            <legend>Contactános llenando todos los campos</legend>
+
+            <div class="contenedor-campos">
+                <div class="campo">
+                    <label>Nombre</label>
+
+                    <input type="text" name="nombre" placeholder="Nombre">
+                </div>
+                <div class="campo">
+                    <label>Teléfono</label>
+
+                    <input type="tel" name="telefono" placeholder="Teléfono">
+                </div>
+                <div class="campo w-100">
+                    <label>Correo</label>
+
+                    <input type="mail" name="correo" placeholder="Mail">
+                </div>
+                <div class="campo w-100">
+                    <label>Mensaje:</label>
+
+                    <textarea></textarea>
+                </div>
+            </div>
+            <!--.contenedor-campos-->
+            <div class="enviar">
+                <input class="btn" type="submit" value="Enviar">
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
