@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+/* GLOBAL */
+:root{
+    --principalFont: 'Staatliches', cursive;
+    --secondaryFomt: 'sans serif';
+    --primary: #9C27B0;
+    --primaryDark: #89118D;
+    --secondary: #FFCE00;
+}
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+* {
+    margin: 0;
+}
+
+html {
+    font-size: 6.25%; /* Reset REM 10px=1EM*/
+    min-height: 100%;
+    font-family: var(--principalFont);
+}
+
+body{
+    background-color: var(--primary);
+    min-height: 100%;
+    font-size: 20rem;
+    line-height: 2;
+}
+
+h1{
+    text-align: center;
+    color: var(--secondary);
+    font-weight: 300;
+    font-size: 30rem;
+    margin: 10rem 0;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    max-width: 1200rem;
+    width: 95%;
+    margin: 0 auto;
+}
+/* HEADER */
+.header{
+    display: grid;
+    justify-content: center;
+    padding: 30rem 0;
+}
+
+/* Navbar */
+.barra{
+    background-color: var(--primaryDark);
+    padding: 10rem 0;
+}
+
+.navbar{
+    display: grid;
+    grid-template-columns: repeat(2, 200rem);
+    column-gap: 10rem;
+    justify-content: center;
+}
+
+.navbar a{
+    font-size: 20rem;   
+    text-align: center;
+    color: white;
+}
+
+.navbar a:hover{
+    color: var(--secondary);
+}
+
+/* PRODUCTOS */
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30rem;
+    row-gap: 10rem;
+}
+
+.product{
+    background-color: var(--primaryDark);
+    padding: 10rem;
+    line-height: 1.5;
+    
+}
+
+.brandName{
+    color: white;
+    text-align: center;
+    font-size: 30rem;
+}
+
+.price{
+    color: var(--secondary);
+    text-align: center;
+    font-size: 24rem;
+    font-weight: 600;
+
+}
+
+.graph{
+    min-height: 300rem;
+    padding: 10rem;
+    line-height: 1.5;
+    grid-column: 1/3;
+    background-size: cover;
+    background-position: center center;
+
+
+}
+
+.gr1{
+    background-image: url('../img/grafico1.jpg');
+    grid-row: 2/3;
+    
+}
+
+.gr2{
+    background-image: url('../img/grafico2.jpg');
+    grid-row: 8/9;
+    
+}
+
+@media (min-width: 768px) {
+    .products{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gr1{
+        grid-row: 2/3;
+        grid-column: 1/3;
+    }
+    
+    .gr2{
+        grid-row: 5/6;
+        grid-column: 2/4;
+    }
+
+    
+}
+
+/* FOOTER */
+
+.footer{
+    background-color: var(--primaryDark);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.copyright{
+    font-family: var(--principalFont);
+    color: white;
+    font-size: 22rem;
+    text-align: center;
+}
+
+
+/* US */
+
+.us-content{
+    font-size: 18rem;
+    color:white;
+    font-family: var(--secondaryFomt);    
+}
+
+
+@media (min-width: 768px) {
+    .us-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30rem;
+    }
+}
+
+/* PRODUCTO */
+
+.product-content{
+    font-size: 18rem;
+    color:white;
+    font-family: var(--secondaryFomt);   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300rem, 1fr));
+    column-gap: 30rem;
+
+}
+
+.product-content img{
+    width: 100%;
+
+}
+
+.product-form{
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 60rem);
+    gap: 10rem;
+}
+
+.campo{
+    background-color: transparent;
+    border: 5px solid #ffffff;
+    font-family: var(--principalFont);
+    font-size: 30rem;
+    padding: 0 10rem;
+    width: 100%;
+    color: var(--secondary);
+}
+
+.talla{
+    appearance: none;
+    border-radius: 0;
+    grid-column: 1/3;
+}
+
+.btn{
+    background-color: var(--secondary);
+    font-size: 20rem;
+    font-family: var(--principalFont);
+    border: none;
+    border-radius: 10rem;
+    transition: background-color .3s ease;
+    grid-column: 1/4;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: #a3a308;
+}
+
+
