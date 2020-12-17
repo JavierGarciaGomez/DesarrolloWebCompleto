@@ -568,6 +568,78 @@ a.reservaciones:hover {
   } 
 }
 
+/* Seccion de precios */
+/* 144 */
+.lista-precios{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.lista-precios > li{
+  flex: 0 0 100%;
+  margin: 1rem 0;
+}
+
+.tabla-precio{
+  border: 1px solid #e1e1e1;
+  background-color: #fff;
+  width: 70%;
+  margin: 0 auto;
+  padding: 1em;
+  transition: all 0.3s ease;
+}
+
+.tabla-precio:hover{
+  transform: scale(1.1);
+  border: 2px solid var(--orange);
+  box-shadow: 0 0 3em #666666;
+}
+
+.tabla-precio h3{
+  color: var(--orange);  
+  font-family: var(--fontOswald);
+}
+
+.tabla-precio ul li{
+  font-family: var(--fontPTSans);
+  font-size: 1em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  color: #868686;
+  line-height: 1.5em;
+}
+
+.tabla-precio ul li:before{
+  content: '\f00c';
+  font-family: 'FontAwesome';
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0.3em;
+  font-size: 1.5em;
+  color: green;
+  -webkit-font-smoothig: antialiased;
+}
+
+.tabla-precio .numero{
+  font-family: var(--fontOswald);
+  font-size: 4em;
+  margin: 0.5em;
+  font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .lista-precios li{
+    flex: 0 0 calc(33.33% - 0.5rem);
+  }
+
+  .tabla-precio{
+    width: 100%;
+    
+  }
+}
+
 
 /* *{
   border: 1px red solid;
