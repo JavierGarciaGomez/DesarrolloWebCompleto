@@ -134,12 +134,11 @@ body{
 }
 
 .seccion{
-  padding: 2rem 0;
+  padding: 2rem;
 }
 
-.seccion p{
-  font-size: 1.2em;
-  text-align: center;
+.seccion p{  
+  text-align: justify;
 }
 
 h2, h3, h4, h5, h6{
@@ -203,11 +202,22 @@ img{
   font-weight: bold;
   display: inline-block;
   margin-right: 0;
+  border: 1px var(--orange) solid;
+}
+
+.button.hollow {
+  background-color: white;
+  color: var(--orange);
 }
 
 .button:hover{
   background-color: #8a1e00;
 }
+
+button.hollow:hover{
+  color: white;
+}
+
 
 /* HEADER */
 
@@ -640,6 +650,85 @@ a.reservaciones:hover {
   }
 }
 
+/* MAPA */
+/* 146 */
+.mapa{
+  height: 30em;
+  background-color: green;
+}
+
+/* TESTIMOMIALES */
+.testimoniales{
+  padding: 1em;
+}
+
+.testimonial{
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  padding: 0.5em;
+}
+
+blockquote{
+  position: relative;
+  margin: 0 0 0.5em 0;
+  
+}
+
+blockquote p{
+  text-align: justify;
+  font-family: var(--fontPTSans);
+  padding: 0 1em 0 4em;
+}
+
+blockquote p::before{
+  content: '\201c';
+  position: absolute;
+  top: 0rem;
+  left: 1rem;
+  font-size: 8rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  color: var(--orange);
+}
+
+.footer-testimonial{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.img-wrapper{
+  flex: 0 0 20%;
+}
+
+.img-wrapper img{
+  border-radius: 50%;
+}
+
+.footer-testimonial cite{
+  flex: 0 0 calc(70%);
+  text-align: left;
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.footer-testimonial span{
+  display: inline-block;
+  color: #000000;
+}
+
+@media (min-width: 768px) {
+  .testimoniales{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .testimonial{
+    flex: 0 0 calc(33% - 0.25em);
+  }
+}
 
 /* *{
   border: 1px red solid;
