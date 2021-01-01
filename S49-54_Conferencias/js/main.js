@@ -256,10 +256,25 @@ $(function () {
 
   })
 
-  // 255 Menú hamburguesa
-  $('.menu-movil').on('click', function () {
-    $('.navbar').slideToggle();
-  })
+  // 335 Colorbox
+  if (document.querySelector('.invitado-info')) {
+    $('.invitado-info').colorbox({
+      inline: true,
+      width: '50%'
+    });
+
+  }
+
+  // 339 Agregar clase a menu
+  console.log("HOla");
+  $('.conferencia').addClass('activo');
+  $('body.conferencia .navbar a:contains("Conferencia")').addClass('activo');
+  $('body.calendario .navbar a:contains("Calendario")').addClass('activo');
+  $('body.invitados .navbar a:contains("Invitados")').addClass('activo');
+
+
+
+
 
 
 })

@@ -52,10 +52,30 @@
 <script src="js/jquery.countdown.min.js"></script>
 <!-- Lettering -->
 <script src="js/jquery.lettering.js"></script>
+<!-- Lightbox -->
+
+<!-- Colorbox -->
+
+
 
 
 <script src="js/plugins.js"></script>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+<!-- 337 -->
+<?php
+$archivo = basename(($_SERVER['PHP_SELF']));
+$pagina = str_replace(".php", "", $archivo);
+
+
+if ($pagina == 'invitados' || $pagina == 'index') {
+    echo "<script src='js/jquery.colorbox-min.js'></script>";
+} else if ($pagina == 'conferencia') {
+    echo "<script src='js/lightbox.js'></script>";
+}
+?>
+
 <script src="js/main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

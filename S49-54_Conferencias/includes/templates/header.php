@@ -18,10 +18,25 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- 337 -->
+    <?php
+    $archivo = basename(($_SERVER['PHP_SELF']));
+    $pagina = str_replace(".php", "", $archivo);
+
+
+    if ($pagina == 'invitados' || $pagina == 'index') {
+        echo "<link rel='stylesheet' href='css/colorbox.css'>";
+    } else if ($pagina == 'conferencia') {
+        echo "<link rel='stylesheet' href='css/lightbox.css'>";
+    }
+    ?>
+
+
+
     <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
+<body class="<?php echo $pagina; ?>">
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->

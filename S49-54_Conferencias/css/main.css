@@ -205,6 +205,7 @@ img {
   display: inline-block;
   margin-right: 0;
   border: 1px var(--orange) solid;
+  text-align: center;
 }
 
 .button.hollow {
@@ -583,6 +584,58 @@ a.reservaciones:hover {
 
 
 /* INVITADOS */
+
+
+ul.lista-invitados li {
+  padding: 10px;
+  float: left;
+}
+
+@media only screen and (min-width:480px) {
+  ul.lista-invitados li {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width:768px) {
+  ul.lista-invitados li {
+    width: 33.3%;
+  }
+}
+
+div.invitado {
+  position: relative;
+  overflow: hidden;
+}
+
+div.invitado img {
+  max-width: 100%;
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  -webkit-transition: all .5s ease-in-out;
+}
+
+div.invitado:hover img {
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(1.1);
+}
+
+div.invitado p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px 10px;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  color: #fe4918;
+  text-transform: uppercase;
+  -webkit-transition: all .5s ease-in-out;
+}
+
+/*
 .invitados {
   margin-top: 3rem;
 }
@@ -638,7 +691,7 @@ a.reservaciones:hover {
   .invitado {
     flex: 0 0 calc(33% - 1rem);
   }
-}
+} */
 
 
 /* CONTADOR */
@@ -1092,8 +1145,8 @@ blockquote p::before {
 ******************************************/
 
 /* 253 */
-body.conferencia .navegacion-principal .activo {
-  border-bottom: 2px solid #fe4918;
+.navbar .activo {
+  border-bottom: 5px solid #fe4918;
 }
 
 /* 253 */
@@ -1157,6 +1210,14 @@ body.conferencia .navegacion-principal .activo {
 
 }
 
+/* Colorbox */
+/* 336 */
+
+.cboxElement {
+  padding: 20px !important;
+}
+
+.cboxElement img {}
 
 
 
