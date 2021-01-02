@@ -6,22 +6,29 @@
   var regalo = document.getElementById('regalo');
   //   208
   document.addEventListener('DOMContentLoaded', function () {
-    console.log('Dom cargado')
+    console.log('Dom cargado');
+
 
     // 218
-    var map = L.map('mapa').setView([21.019557, -89.595265], 13);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+    if (document.querySelector('.mapa')) {
+      var map = L.map('mapa').setView([21.019557, -89.595265], 13);
 
-    L.marker([21.019557, -89.595265]).addTo(map)
-      .bindPopup('Sucursal Urban')
-      .openPopup();
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
 
-    L.marker([21.002827, -89.614862]).addTo(map)
-      .bindPopup('Sucursal Montejo.')
-      .openPopup();
+      L.marker([21.019557, -89.595265]).addTo(map)
+        .bindPopup('Sucursal Urban')
+        .openPopup();
+
+      L.marker([21.002827, -89.614862]).addTo(map)
+        .bindPopup('Sucursal Montejo.')
+        .openPopup();
+    }
+
+
+
 
     //209
     // campos datos usuario
@@ -46,8 +53,16 @@
     var etiquetas = document.getElementById('etiquetas');
     // 210
 
+    // 345
+    if (btnRegistro) {
+      btnRegistro.disabled = true;
+    }
+
+
     // 256
-    if (document.querySelector(nombre)) {
+
+    if (document.querySelector('#nombre')) {
+
       calcular.addEventListener('click', calcularMontos);
 
       // 214
@@ -121,6 +136,10 @@
 
         // 213
         suma_total.innerHTML = "$ " + totalAPagar.toFixed(2);
+
+        // 345
+        btnRegistro.disabled = false;
+        document.getElementById('total_pedido').value = totalAPagar;
       }
     }
 
@@ -143,7 +162,7 @@
       if (boletosCompleto > 0) {
         diasElegidos.push('viernes', 'sabado', 'domingo');
       }
-      for (var i = 0; diasElegidos.length; i++) {
+      for (var i = 0; i < diasElegidos.length; i++) {
         document.getElementById(diasElegidos[i]).style.display = 'block';
       }
 
@@ -240,7 +259,7 @@ $(function () {
   $(window).scroll(function () {
 
     var scroll = $(window).scrollTop();
-    console.log(scroll);
+    //console.log(scroll);
     // 254 hacerlo fijo
     if (scroll > windowHeight) {
       $('.barra').addClass('fixed');
@@ -271,6 +290,8 @@ $(function () {
   $('body.conferencia .navbar a:contains("Conferencia")').addClass('activo');
   $('body.calendario .navbar a:contains("Calendario")').addClass('activo');
   $('body.invitados .navbar a:contains("Invitados")').addClass('activo');
+
+
 
 
 

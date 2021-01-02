@@ -205,7 +205,6 @@ img {
   display: inline-block;
   margin-right: 0;
   border: 1px var(--orange) solid;
-  text-align: center;
 }
 
 .button.hollow {
